@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<style>
+
+  body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); 
+    color: #fff;
+  }
+
+.carousel-inner {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); 
+  z-index: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover; 
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05); 
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.card-body {
+  color: #fff;
+}
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #1f1b2e, #3a2d5f);
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+</style>
+<body>
+    <div class="alert alert-warning" role="alert">
+  Últimos ingressos disponíveis!
+</div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="bi bi-music-note-beamed"></i> Empire Fest</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#artistas">Artistas</a>
+        <a class="nav-link" href="#ingressos">Ingressos</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div style="height:80px"></div>
+<section class="container text-center my-5">
+<h1 class="display-2 fw-bold text-danger">EMPIRE MUSIC FESTIVAL</h1>
+<p class="lead">O maior encontro de lendas da música mundial</p>
+<a href="#ingressos" class="btn btn-danger btn-lg mt-3">Comprar ingresso</a>
+</section>
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="eminem2.gif" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="cold2.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="the2.gif" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br><br>
+<section id="artistas" class="container my-5">
+  <h2 class="text-center text-danger mb-4">Artistas</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card h-100 d-flex flex-column">
+        <img src="eminem.png" class="card-img-top">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold text-danger">Eminem</h5>
+          <p class="card-text">Um show explosivo com rimas rápidas e clássicos como <b>"Lose Yourself"</b> e <b>"Without Me"</b>.</p>
+          <a href="#" class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#modalEminem">Detalhes</a>
+        </div>
+      </div>
+    </div>
+
+   <div class="modal fade" id="modalEminem" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">🔥 Eminem</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <h4 class="text-danger">Horário do Show</h4>
+        <p class="fs-5">
+          <i class="bi bi-clock"></i> 20:00
+        </p>
+
+        <hr>
+
+        <p>
+          Um show explosivo com rimas rápidas e os maiores hits do rap mundial.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="col-md-4">
+      <div class="card h-100 d-flex flex-column">
+        <img src="coldplay.jpg" class="card-img-top">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold text-danger">Coldplay</h5>
+          <p class="card-text">Uma experiência inesquecível com efeitos visuais, luzes e os maiores hits como <b>"Fix You"</b> e <b>"Viva La Vida"</b>.</p>
+          <a href="#" class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#modalColdplay">Detalhes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalColdplay" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">🌟 Coldplay</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <h4 class="text-primary">Horário do Show</h4>
+        <p class="fs-5"><i class="bi bi-clock"></i> 21:30</p>
+
+        <hr>
+
+        <p>
+          Experiência visual incrível com grandes sucessos.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="col-md-4">
+      <div class="card h-100 d-flex flex-column">
+        <img src="theweeknd.jpg" class="card-img-top">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold text-danger">The Weeknd</h5>
+          <p class="card-text"> Um show intenso com atmosfera única e sucessos como <b>"Blinding Lights"</b> e <b>"Save Your Tears"</b>.</p>
+          <a href="#" class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#modalWeeknd">Detalhes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalWeeknd" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🌙 The Weeknd</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <h4 class="text-dark">Horário do Show</h4>
+        <p class="fs-5">
+          <i class="bi bi-clock"></i> 23:00
+        </p>
+
+        <hr>
+
+        <p>
+          Um espetáculo envolvente com atmosfera noturna e hits como 
+          <b>"Blinding Lights"</b> e <b>"Save Your Tears"</b>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+  
+  <div class="text-center my-4">
+  <button class="btn btn-outline-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalLocal">  <i class="bi bi-geo-alt-fill"></i>
+    Ver local do evento
+  </button>
+  <div class="modal fade" id="modalLocal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Local do Empire Music Festival</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h5>📍Endereço</h5>
+        <p>Nova York</p>
+        <p>1520 Sedgwick Avenue</p>
+        <hr>
+        <h5>🗺️ Mapa</h5>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1775402592035!6m8!1m7!1s2Tz1o3ppmFPaSjrl8VZWcA!2m2!1d40.84717129261833!2d-73.9247570068165!3f79.81!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+     </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+    <div class="accordion" id="accordionExample">
+       <h4 class="text-center text-danger mb-4">Dúvidas Frequentes</h4>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+       Onde será o Empire Music Festival?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       O festival acontecerá em um espaço aberto preparado para grandes shows, com estrutura completa, praça de alimentação e área VIP.
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Quais artistas vão se apresentar?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+         O evento contará com shows de Eminem, Coldplay e The Weeknd, trazendo performances históricas para o público.
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Como comprar ingressos?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Os ingressos podem ser adquiridos pelo botão "Comprar Ingresso" no topo da página.
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="ingressos" class="container my-5">
+<h4 class="text-center text-danger mb-4">Comprar Ingresso</h4>
+
+<form id="formIngresso" class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="validationDefault01"  placeholder="Seu nome" required>
+    <div class="invalid-feedback">Informe seu nome</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefault02" class="form-label">Email</label>
+    <input type="text" class="form-control" id="validationDefault02"  placeholder="seu@gmail.com" required>
+     <div class="invalid-feedback">Email inválido</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefaultUsername" class="form-label">Quantidade de Ingressos</label>
+    <div class="input-group">
+      <span class="input-group-text">🎟️</span>
+      <input type="number" class="form-control" id="validationDefaultUsername" min="1" required>
+       <div class="invalid-feedback">Informe a quantidade</div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationDefault03" class="form-label">Cidade</label>
+    <input type="text" class="form-control" id="validationDefault03" required>
+    <div class="invalid-feedback">Informe sua cidade</div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationDefault04" class="form-label">Tipo de Ingresso</label>
+    <select class="form-select" id="validationDefault04" required>
+      <option selected disabled value="">Escolha</option>
+      <option value="50">Pista — R$ 50</option>
+      <option value="120">VIP — R$ 120</option>
+      <option value="300">Camarote — R$ 300</option>
+    </select>
+    <div class="invalid-feedback">Escolha o tipo</div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationDefault05" class="form-label">CEP</label>
+    <input type="text" class="form-control" id="validationDefault05" required>
+     <div class="invalid-feedback">Informe o CEP</div>
+  </div>
+  <div class="col-12">
+  <div class="alert alert-success" id="valorTotal">
+    Valor Total: R$ 0,00
+  </div>
+</div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Confirmo que os dados estão corretos
+      </label>
+      <div class="invalid-feedback">Você precisa confirmar</div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Comprar Ingresso</button>
+  </div>
+</form>
+
+  </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const tipo = document.getElementById('validationDefault04');
+  const qtd  = document.getElementById('validationDefaultUsername');
+  const totalBox = document.getElementById('valorTotal');
+
+  function calcularTotal() {
+    const preco = parseFloat(tipo.value) || 0;
+    const quantidade = parseInt(qtd.value) || 0;
+
+    const total = preco * quantidade;
+
+    totalBox.innerHTML = "Valor Total: R$ " + 
+      total.toLocaleString('pt-BR', {minimumFractionDigits: 2});
+  }
+
+  tipo.addEventListener('change', calcularTotal);
+  qtd.addEventListener('change', calcularTotal);
+  qtd.addEventListener('keyup', calcularTotal);
+
+});
+</script>
+<script>
+(() => {
+  'use strict'
+  const form = document.getElementById('formIngresso');
+
+  form.addEventListener('submit', event => {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+  });
+})();
+</script>
+</body>
+</html>
